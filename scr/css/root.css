@@ -47,4 +47,16 @@
 
   --ks-speed:.25s ease;
 
+/* Font */
+--ks-font-ui:'Poppins',sans-serif;
+--ks-font-reader:'Lora',serif;
+
+/* Transition */
+--ks-transition:0.25s ease;
+
+/* Shadow */
+--ks-shadow-sm:0 2px 8px rgba(0,0,0,.06);
+--ks-shadow:0 8px 24px rgba(0,0,0,.08);
+--ks-shadow-lg:0 12px 36px rgba(0,0,0,.12);
+
 }
