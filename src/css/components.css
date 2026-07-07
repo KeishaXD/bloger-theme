@@ -275,3 +275,89 @@
 
     color:var(--ks-text-light);
 }
+
+/* =========================================================
+   Progress
+   ========================================================= */
+
+.ks-progress{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:4px;
+
+    background:transparent;
+
+    z-index:var(--ks-z-fixed);
+
+}
+
+.ks-progress-fill{
+
+    width:0;
+    height:100%;
+
+    background:var(--ks-primary);
+
+    transition:width .15s linear;
+
+}
+
+/* =========================================================
+   Back To Top
+   ========================================================= */
+
+.ks-backtop{
+
+    position:fixed;
+
+    right:24px;
+    bottom:24px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    width:48px;
+    height:48px;
+
+    border:none;
+    border-radius:50%;
+
+    background:var(--ks-primary);
+
+    color:#fff;
+
+    cursor:pointer;
+
+    opacity:0;
+    visibility:hidden;
+
+    transform:translateY(12px);
+
+    transition:
+        opacity var(--ks-transition),
+        transform var(--ks-transition);
+
+    z-index:var(--ks-z-fixed);
+
+}
+
+.ks-backtop.is-visible{
+
+    opacity:1;
+    visibility:visible;
+
+    transform:translateY(0);
+
+}
+
+.ks-backtop:hover{
+
+    background:var(--ks-primary-hover);
+
+}
