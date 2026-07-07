@@ -107,10 +107,19 @@
     <!-- =====================================================
          Main
     ====================================================== -->
+<!-- =====================================================
+     Main
+===================================================== -->
 
-    <main class='ks-main'>
+<main class='ks-main'>
 
-        <div class='ks-container'>
+    <div class='ks-container'>
+
+        <!-- =====================================================
+             Homepage
+        ====================================================== -->
+
+        <b:if cond='data:view.isHomepage'>
 
             <div class='ks-page'>
 
@@ -140,7 +149,7 @@
 
                         </section>
 
-                        <!-- Latest -->
+                        <!-- Latest Update -->
 
                         <section class='ks-home-section'>
 
@@ -154,7 +163,39 @@
 
                             <div class='ks-novel-grid'>
 
-                                <!-- Card akan dibuat Blogger Loop -->
+                                <!-- Novel Card -->
+
+                                <article class='ks-card'>
+
+                                    <a class='ks-card-cover' href='#'>
+
+                                        <img alt='Novel Cover' src=''/>
+
+                                    </a>
+
+                                    <div class='ks-card-body'>
+
+                                        <h3 class='ks-card-title'>
+
+                                            <a href='#'>
+                                                Judul Novel
+                                            </a>
+
+                                        </h3>
+
+                                        <div class='ks-card-meta'>
+
+                                            <span>Chapter 1</span>
+
+                                            <span class='ks-badge'>
+                                                Ongoing
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                </article>
 
                             </div>
 
@@ -164,7 +205,17 @@
 
                         <nav class='ks-pagination'>
 
-                            <!-- Blogger Pagination -->
+                            <a class='ks-page-link is-active' href='#'>
+                                1
+                            </a>
+
+                            <a class='ks-page-link' href='#'>
+                                2
+                            </a>
+
+                            <a class='ks-page-link' href='#'>
+                                3
+                            </a>
 
                         </nav>
 
@@ -176,13 +227,53 @@
 
                     <aside class='ks-sidebar'>
 
-                        <!-- Search -->
+                        <div class='ks-widget'>
 
-                        <!-- Popular -->
+                            <h3 class='ks-widget-title'>
+                                Continue Reading
+                            </h3>
 
-                        <!-- Genre -->
+                            <div class='ks-widget-body'>
 
-                        <!-- Completed -->
+                            </div>
+
+                        </div>
+
+                        <div class='ks-widget'>
+
+                            <h3 class='ks-widget-title'>
+                                Popular Novel
+                            </h3>
+
+                            <div class='ks-widget-body'>
+
+                            </div>
+
+                        </div>
+
+                        <div class='ks-widget'>
+
+                            <h3 class='ks-widget-title'>
+                                Genre
+                            </h3>
+
+                            <div class='ks-widget-body'>
+
+                            </div>
+
+                        </div>
+
+                        <div class='ks-widget'>
+
+                            <h3 class='ks-widget-title'>
+                                Completed
+                            </h3>
+
+                            <div class='ks-widget-body'>
+
+                            </div>
+
+                        </div>
 
                     </aside>
 
@@ -190,9 +281,157 @@
 
             </div>
 
-        </div>
+        </b:if>
 
-    </main>
+        <!-- =====================================================
+             Post
+        ====================================================== -->
+
+        <b:if cond='data:view.isPost'>
+
+            <div class='ks-page'>
+
+                <section class='ks-content'>
+
+                    <nav class='ks-breadcrumb'>
+
+                        <a expr:href='data:blog.homepageUrl'>
+                            Beranda
+                        </a>
+
+                        <span>/</span>
+
+                        <span>Novel</span>
+
+                    </nav>
+
+                    <header class='ks-post-header'>
+
+                        <h1 class='ks-post-title'>
+                            Judul Chapter
+                        </h1>
+
+                        <p class='ks-post-subtitle'>
+                            Volume 1
+                        </p>
+
+                        <div class='ks-post-meta'>
+
+                            <span>Penulis</span>
+
+                            <span>•</span>
+
+                            <span>Chapter 1</span>
+
+                        </div>
+
+                    </header>
+
+                    <div class='ks-reader'>
+
+                        <article class='ks-reader-content'>
+
+                            <!-- Chapter Content -->
+
+                        </article>
+
+                    </div>
+
+                    <nav class='ks-chapter-nav'>
+
+                        <a class='ks-chapter-btn' href='#'>
+                            ← Sebelumnya
+                        </a>
+
+                        <a class='ks-chapter-btn' href='#'>
+                            Daftar Bab
+                        </a>
+
+                        <a class='ks-chapter-btn' href='#'>
+                            Selanjutnya →
+                        </a>
+
+                    </nav>
+
+                    <section class='ks-related'>
+
+                    </section>
+
+                    <section class='ks-comment'>
+
+                    </section>
+
+                </section>
+
+            </div>
+
+        </b:if>
+
+        <!-- =====================================================
+             Static Page
+        ====================================================== -->
+
+        <b:if cond='data:view.isPage'>
+
+            <div class='ks-page'>
+
+                <section class='ks-content'>
+
+                    <h1 class='ks-post-title'>
+                        Halaman
+                    </h1>
+
+                </section>
+
+            </div>
+
+        </b:if>
+
+        <!-- =====================================================
+             Search
+        ====================================================== -->
+
+        <b:if cond='data:view.isSearch'>
+
+            <div class='ks-page'>
+
+                <section class='ks-content'>
+
+                    <!-- Search Result -->
+
+                </section>
+
+            </div>
+
+        </b:if>
+
+        <!-- =====================================================
+             Error 404
+        ====================================================== -->
+
+        <b:if cond='data:view.isError'>
+
+            <div class='ks-page'>
+
+                <section class='ks-content ks-text-center'>
+
+                    <h1 class='ks-post-title'>
+                        404
+                    </h1>
+
+                    <p>
+                        Halaman tidak ditemukan.
+                    </p>
+
+                </section>
+
+            </div>
+
+        </b:if>
+
+    </div>
+
+</main>
 
     <!-- =====================================================
          Footer
