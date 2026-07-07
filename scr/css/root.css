@@ -101,7 +101,6 @@
        ===================================================== */
 
     --ks-container:1200px;
-    --ks-reader:760px;
     --ks-sidebar:320px;
 
     /* =====================================================
@@ -123,6 +122,23 @@
 
     --ks-icon-size:42px;
     --ks-icon-font-size:20px;
+
+    /* =====================================================
+    Reader
+    ===================================================== */
+
+    --ks-reader-width:760px;
+
+    --ks-reader-font-size:1.15rem;
+    --ks-reader-line-height:1.9;
+
+    --ks-reader-padding:var(--ks-space-10);
+
+    --ks-reader-title-size:var(--ks-font-3xl);
+    --ks-reader-meta-size:var(--ks-font-sm);
+
+    --ks-reader-paragraph-spacing:var(--ks-space-6);
+    --ks-reader-heading-spacing:var(--ks-space-8);
 
     /* =====================================================
        Footer

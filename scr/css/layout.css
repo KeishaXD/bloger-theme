@@ -84,10 +84,7 @@ body{
    ========================================================= */
 
 .ks-reader{
-    width:100%;
-    max-width:var(--ks-reader);
-    margin-inline:auto;
-    position:relative;
+    max-width:var(--ks-reader-width);
 }
 
 /* =========================================================
