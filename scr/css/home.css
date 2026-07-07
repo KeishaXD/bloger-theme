@@ -1,0 +1,243 @@
+/* =========================================================
+   KeiScanlation
+   Home CSS
+   ========================================================= */
+
+/* =========================================================
+   Hero
+   ========================================================= */
+
+.ks-hero{
+    margin-bottom:var(--ks-section-padding);
+}
+
+.ks-hero-inner{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:flex-start;
+
+    gap:var(--ks-space-5);
+
+    min-height:280px;
+
+    padding:var(--ks-space-10);
+
+    border:var(--ks-border-width) solid var(--ks-border);
+    border-radius:var(--ks-radius-lg);
+
+    background:var(--ks-surface);
+
+    transition:
+        background-color var(--ks-transition),
+        border-color var(--ks-transition);
+}
+
+.ks-hero-title{
+    font-size:var(--ks-font-3xl);
+    font-weight:700;
+    line-height:1.2;
+    color:var(--ks-text);
+}
+
+.ks-hero-description{
+    max-width:640px;
+
+    color:var(--ks-text-light);
+
+    line-height:var(--ks-line-height);
+}
+
+/* =========================================================
+   Section
+   ========================================================= */
+
+.ks-home-section{
+    margin-bottom:var(--ks-section-padding);
+}
+
+.ks-section-header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    margin-bottom:var(--ks-space-6);
+}
+
+.ks-section-title{
+    font-size:var(--ks-font-xl);
+    font-weight:700;
+
+    color:var(--ks-text);
+}
+
+/* =========================================================
+   Novel Grid
+   ========================================================= */
+
+.ks-novel-grid{
+    display:grid;
+    grid-template-columns:repeat(4,minmax(0,1fr));
+    gap:var(--ks-space-6);
+}
+
+/* =========================================================
+   Novel Card
+   ========================================================= */
+
+.ks-card{
+    display:flex;
+    flex-direction:column;
+
+    overflow:hidden;
+
+    border:var(--ks-border-width) solid var(--ks-border);
+    border-radius:var(--ks-radius);
+
+    background:var(--ks-surface);
+
+    transition:
+        transform var(--ks-transition),
+        box-shadow var(--ks-transition),
+        border-color var(--ks-transition),
+        background-color var(--ks-transition);
+}
+
+.ks-card:hover{
+    transform:translateY(-4px);
+    box-shadow:var(--ks-shadow);
+}
+
+.ks-card-cover{
+    aspect-ratio:2 / 3;
+    overflow:hidden;
+}
+
+.ks-card-cover img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+
+    transition:transform var(--ks-transition-slow);
+}
+
+.ks-card:hover .ks-card-cover img{
+    transform:scale(1.05);
+}
+
+.ks-card-body{
+    display:flex;
+    flex-direction:column;
+    gap:var(--ks-space-3);
+
+    padding:var(--ks-space-5);
+}
+
+.ks-card-title{
+    font-size:var(--ks-font-md);
+    font-weight:600;
+    line-height:1.4;
+
+    color:var(--ks-text);
+}
+
+.ks-card-title a{
+    color:inherit;
+}
+
+.ks-card-title a:hover{
+    color:var(--ks-primary);
+}
+
+.ks-card-meta{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    gap:var(--ks-space-3);
+
+    color:var(--ks-text-light);
+    font-size:var(--ks-font-sm);
+}
+
+/* =========================================================
+   Badge
+   ========================================================= */
+
+.ks-badge{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:
+        var(--ks-space-2)
+        var(--ks-space-4);
+
+    border-radius:var(--ks-radius-full);
+
+    font-size:var(--ks-font-xs);
+    font-weight:600;
+
+    background:var(--ks-primary);
+    color:#ffffff;
+}
+
+.ks-badge-success{
+    background:var(--ks-success);
+}
+
+.ks-badge-warning{
+    background:var(--ks-warning);
+}
+
+.ks-badge-danger{
+    background:var(--ks-danger);
+}
+
+.ks-badge-info{
+    background:var(--ks-info);
+}
+
+/* =========================================================
+   Pagination
+   ========================================================= */
+
+.ks-pagination{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    gap:var(--ks-space-3);
+
+    margin-top:var(--ks-space-10);
+}
+
+.ks-page-link{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    min-width:44px;
+    height:44px;
+
+    padding-inline:var(--ks-space-4);
+
+    border:var(--ks-border-width) solid var(--ks-border);
+    border-radius:var(--ks-radius);
+
+    background:var(--ks-bg);
+
+    color:var(--ks-text);
+
+    transition:
+        background-color var(--ks-transition),
+        border-color var(--ks-transition),
+        color var(--ks-transition);
+}
+
+.ks-page-link:hover,
+.ks-page-link.is-active{
+    background:var(--ks-primary);
+    border-color:var(--ks-primary);
+    color:#ffffff;
+}
