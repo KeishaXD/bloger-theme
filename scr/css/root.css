@@ -1,0 +1,50 @@
+:root{
+
+  /* Color */
+  --ks-primary:#7C3AED;
+  --ks-primary-hover:#6D28D9;
+  --ks-secondary:#A78BFA;
+
+  --ks-bg:#FFFFFF;
+  --ks-surface:#F8FAFC;
+  --ks-surface-2:#F1F5F9;
+
+  --ks-text:#27272A;
+  --ks-text-light:#71717A;
+
+  --ks-border:#E5E7EB;
+
+  /* Typography */
+
+  --ks-font-ui:'Poppins',sans-serif;
+  --ks-font-reader:'Lora',serif;
+
+  --ks-font-xs:.8rem;
+  --ks-font-sm:.9rem;
+  --ks-font-md:1rem;
+  --ks-font-lg:1.2rem;
+  --ks-font-xl:1.5rem;
+  --ks-font-2xl:2rem;
+
+  /* Radius */
+
+  --ks-radius-sm:8px;
+  --ks-radius:14px;
+  --ks-radius-lg:20px;
+
+  /* Shadow */
+
+  --ks-shadow:
+  0 10px 25px rgba(0,0,0,.08);
+
+  /* Width */
+
+  --ks-container:1200px;
+  --ks-reader:760px;
+  --ks-sidebar:320px;
+
+  /* Transition */
+
+  --ks-speed:.25s ease;
+
+}
