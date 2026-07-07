@@ -1,0 +1,216 @@
+/* =========================================================
+   KeiScanlation
+   Header CSS
+   ========================================================= */
+
+/* =========================================================
+   Header
+   ========================================================= */
+
+.ks-header{
+    position:sticky;
+    top:0;
+    z-index:var(--ks-z-sticky);
+
+    width:100%;
+    height:var(--ks-header-height);
+
+    background:var(--ks-bg);
+    border-bottom:var(--ks-border-width) solid var(--ks-border);
+
+    transition:
+        background-color var(--ks-transition),
+        border-color var(--ks-transition),
+        box-shadow var(--ks-transition),
+        height var(--ks-transition);
+}
+
+/* =========================================================
+   Glass Effect
+   ========================================================= */
+
+@supports(backdrop-filter:blur(10px)){
+
+    .ks-header{
+
+        background:color-mix(in srgb,var(--ks-bg) 85%,transparent);
+
+        backdrop-filter:blur(12px);
+
+        -webkit-backdrop-filter:blur(12px);
+
+    }
+
+}
+
+/* =========================================================
+   Header Container
+   ========================================================= */
+
+.ks-header-container{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    height:100%;
+
+}
+
+/* =========================================================
+   Logo
+   ========================================================= */
+
+.ks-logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:var(--ks-space-3);
+
+    font-size:var(--ks-font-lg);
+
+    font-weight:700;
+
+    white-space:nowrap;
+
+}
+
+.ks-logo img{
+
+    height:38px;
+
+    width:auto;
+
+}
+
+.ks-logo-text{
+
+    color:var(--ks-text);
+
+}
+
+/* =========================================================
+   Navigation
+   ========================================================= */
+
+.ks-nav{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:var(--ks-space-6);
+
+}
+
+.ks-nav-list{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:var(--ks-space-6);
+
+}
+
+.ks-nav-link{
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+    height:var(--ks-header-height);
+
+    font-weight:500;
+
+    transition:color var(--ks-transition);
+
+}
+
+.ks-nav-link:hover{
+
+    color:var(--ks-primary);
+
+}
+
+/* =========================================================
+   Header Action
+   ========================================================= */
+
+.ks-header-action{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:var(--ks-space-2);
+
+}
+
+/* =========================================================
+   Icon Button
+   ========================================================= */
+
+.ks-icon-btn{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    width:42px;
+
+    height:42px;
+
+    border-radius:var(--ks-radius-full);
+
+    transition:
+        background var(--ks-transition),
+        color var(--ks-transition);
+
+}
+
+.ks-icon-btn:hover{
+
+    background:var(--ks-surface);
+
+    color:var(--ks-primary);
+
+}
+
+.ks-icon-btn svg{
+
+    width:20px;
+
+    height:20px;
+
+}
+
+/* =========================================================
+   Mobile Menu Button
+   ========================================================= */
+
+.ks-menu-toggle{
+
+    display:none;
+
+}
+
+/* =========================================================
+   Header Shrink
+   ========================================================= */
+
+.ks-header.is-scrolled{
+
+    height:64px;
+
+    box-shadow:var(--ks-shadow-sm);
+
+}

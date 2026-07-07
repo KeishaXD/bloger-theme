@@ -310,3 +310,12 @@ body{
 .ks-visible{
     visibility:visible;
 }
+
+/* =========================================================
+   Header Scroll
+   ========================================================= */
+
+.ks-header.is-scrolled{
+    height:var(--ks-header-height-scrolled);
+    box-shadow:var(--ks-shadow-sm);
+}
