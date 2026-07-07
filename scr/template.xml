@@ -15,19 +15,18 @@
 
 <head>
 
-<meta charset='UTF-8'/>
+    <meta charset='UTF-8'/>
+    <meta content='width=device-width, initial-scale=1' name='viewport'/>
 
-<meta content='width=device-width,initial-scale=1' name='viewport'/>
+    <title>
+        <data:view.title/>
+    </title>
 
-<title>
-    <data:view.title/>
-</title>
+    <b:skin><![CDATA[
 
-<b:skin><![CDATA[
+{{KS_CSS}}
 
-{{CSS}}
-
-]]></b:skin>
+    ]]></b:skin>
 
 </head>
 
@@ -35,15 +34,206 @@
 
 <div class='ks-wrapper'>
 
-{{HEADER}}
+    <!-- =====================================================
+         Header
+    ====================================================== -->
 
-{{MAIN}}
+    <header class='ks-header'>
 
-{{FOOTER}}
+        <div class='ks-container ks-header-container'>
+
+            <a class='ks-logo' expr:href='data:blog.homepageUrl'>
+
+                <img alt='Logo' src=''/>
+
+                <span class='ks-logo-text'>
+                    KeiScanlation
+                </span>
+
+            </a>
+
+            <nav class='ks-nav'>
+
+                <ul class='ks-nav-list'>
+
+                    <li>
+                        <a class='ks-nav-link' expr:href='data:blog.homepageUrl'>
+                            Beranda
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class='ks-nav-link' href='#'>
+                            Daftar Novel
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class='ks-nav-link' href='#'>
+                            Genre
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class='ks-nav-link' href='#'>
+                            Completed
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+            <div class='ks-header-action'>
+
+                <button class='ks-icon-btn ks-darkmode' type='button' aria-label='Dark Mode'>
+                    🌙
+                </button>
+
+                <button class='ks-icon-btn ks-search' type='button' aria-label='Search'>
+                    🔍
+                </button>
+
+                <button class='ks-icon-btn ks-menu-toggle' type='button' aria-label='Menu'>
+                    ☰
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- =====================================================
+         Main
+    ====================================================== -->
+
+    <main class='ks-main'>
+
+        <div class='ks-container'>
+
+            <div class='ks-page'>
+
+                <div class='ks-layout'>
+
+                    <!-- =====================================
+                         Content
+                    ====================================== -->
+
+                    <section class='ks-content'>
+
+                        <!-- Hero -->
+
+                        <section class='ks-hero'>
+
+                            <div class='ks-hero-inner'>
+
+                                <h1 class='ks-hero-title'>
+                                    KeiScanlation
+                                </h1>
+
+                                <p class='ks-hero-description'>
+                                    Tempat membaca terjemahan Light Novel bahasa Indonesia.
+                                </p>
+
+                            </div>
+
+                        </section>
+
+                        <!-- Latest -->
+
+                        <section class='ks-home-section'>
+
+                            <div class='ks-section-header'>
+
+                                <h2 class='ks-section-title'>
+                                    Update Terbaru
+                                </h2>
+
+                            </div>
+
+                            <div class='ks-novel-grid'>
+
+                                <!-- Card akan dibuat Blogger Loop -->
+
+                            </div>
+
+                        </section>
+
+                        <!-- Pagination -->
+
+                        <nav class='ks-pagination'>
+
+                            <!-- Blogger Pagination -->
+
+                        </nav>
+
+                    </section>
+
+                    <!-- =====================================
+                         Sidebar
+                    ====================================== -->
+
+                    <aside class='ks-sidebar'>
+
+                        <!-- Search -->
+
+                        <!-- Popular -->
+
+                        <!-- Genre -->
+
+                        <!-- Completed -->
+
+                    </aside>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- =====================================================
+         Footer
+    ====================================================== -->
+
+    <footer class='ks-footer'>
+
+        <div class='ks-container ks-footer-container'>
+
+            <div class='ks-footer-brand'>
+
+                <h2 class='ks-footer-title'>
+                    KeiScanlation
+                </h2>
+
+                <p class='ks-footer-description'>
+                    Terjemahan Light Novel Indonesia.
+                </p>
+
+            </div>
+
+            <nav class='ks-footer-nav'>
+
+                <a class='ks-footer-link' href='#'>Privacy</a>
+                <a class='ks-footer-link' href='#'>Disclaimer</a>
+                <a class='ks-footer-link' href='#'>DMCA</a>
+                <a class='ks-footer-link' href='#'>Contact</a>
+
+            </nav>
+
+            <p class='ks-footer-copy'>
+                © 2026 KeiScanlation. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
 
 </div>
 
-{{JS}}
+{{KS_JS}}
 
 </body>
 
