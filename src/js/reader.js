@@ -10,6 +10,9 @@
    ========================================================= */
 
 let saveProgressTimer = null;
+
+/* LocalStorage Key */
+
 const KS_READER_KEY = "KeiScanlation.Reader";
 
 /* =========================================================
@@ -30,17 +33,18 @@ function initReader(){
 
     restoreSettings();
 
-    window.addEventListener("scroll",handleScroll);
-
-    document.addEventListener("visibilitychange",()=>{
-
-        if(document.visibilityState === "hidden"){
-
-            saveProgress();
-
+    window.addEventListener(
+        "scroll",
+        handleScroll,
+        {
+            passive:true
         }
+    );
 
-    });
+    document.addEventListener(
+        "visibilitychange",
+        handleVisibilityChange
+    );
 
 }
 
@@ -61,6 +65,20 @@ function handleScroll(){
         saveProgress();
 
     },300);
+
+}
+
+/* =========================================================
+   Visibility
+   ========================================================= */
+
+function handleVisibilityChange(){
+
+    if(document.visibilityState === "hidden"){
+
+        saveProgress();
+
+    }
 
 }
 
@@ -138,11 +156,28 @@ function saveProgress(){
 
 function restoreSettings(){
 
-    const data = JSON.parse(
-        localStorage.getItem(KS_READER_KEY)
-    );
+    let data = null;
 
-    if(!data){
+    try{
+
+        const stored = localStorage.getItem(KS_READER_KEY);
+
+        if(!stored){
+            return;
+        }
+
+        data = JSON.parse(stored);
+
+    }catch(error){
+
+        return;
+
+    }
+
+    if(
+        typeof data.url !== "string" ||
+        typeof data.scroll !== "number"
+    ){
         return;
     }
 
@@ -156,7 +191,7 @@ function restoreSettings(){
 
             top:data.scroll,
 
-            behavior: "auto"
+            behavior:"auto"
 
         });
 
@@ -202,7 +237,7 @@ function createBackToTop(){
 
     button.className = "ks-backtop";
 
-    button.innerHTML = "↑";
+    button.textContent = "↑";
 
     button.setAttribute(
         "aria-label",
