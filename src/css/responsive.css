@@ -1,0 +1,257 @@
+/* =========================================================
+   KeiScanlation
+   Responsive CSS
+   ========================================================= */
+
+/* =========================================================
+   Responsive Breakpoints
+
+   1200px - Desktop
+    992px - Laptop
+    768px - Tablet
+    576px - Mobile
+    400px - Small Mobile
+   ========================================================= */
+
+@media (max-width:1200px){
+
+    .ks-container{
+        padding-inline:var(--ks-space-6);
+    }
+
+    .ks-novel-grid{
+        grid-template-columns:repeat(3,minmax(0,1fr));
+    }
+
+}
+
+/* =========================================================
+   Laptop
+   Max Width: 992px
+   ========================================================= */
+
+@media (max-width:992px){
+
+    .ks-layout{
+        grid-template-columns:1fr;
+    }
+
+    .ks-sidebar{
+        position:static;
+        margin-top:var(--ks-space-8);
+    }
+
+    .ks-novel-grid{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+    }
+
+    .ks-hero-inner{
+        padding:var(--ks-space-8);
+    }
+
+    .ks-reader{
+        padding:var(--ks-space-8);
+    }
+
+}
+
+/* =========================================================
+   Tablet
+   Max Width: 768px
+   ========================================================= */
+
+@media (max-width:768px){
+
+    /* ==========================
+       Header
+       ========================== */
+
+    .ks-nav{
+        display:none;
+    }
+
+    .ks-menu-toggle{
+        display:flex;
+    }
+
+    .ks-header-container{
+        gap:var(--ks-space-4);
+    }
+
+    .ks-logo-text{
+        display:none;
+    }
+
+    /* ==========================
+       Layout
+       ========================== */
+
+    .ks-main{
+        padding-block:var(--ks-space-6);
+    }
+
+    .ks-section{
+        margin-bottom:var(--ks-space-8);
+    }
+
+    /* ==========================
+       Hero
+       ========================== */
+
+    .ks-hero-inner{
+        min-height:220px;
+        padding:var(--ks-space-7);
+    }
+
+    .ks-hero-title{
+        font-size:var(--ks-font-2xl);
+    }
+
+    /* ==========================
+       Grid
+       ========================== */
+
+    .ks-novel-grid{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        gap:var(--ks-space-5);
+    }
+
+    /* ==========================
+       Reader
+       ========================== */
+
+    .ks-reader{
+        padding:var(--ks-space-7);
+    }
+
+    .ks-post-title{
+        font-size:var(--ks-font-2xl);
+    }
+
+    /* ==========================
+       Chapter Navigation
+       ========================== */
+
+    .ks-chapter-nav{
+        flex-wrap:wrap;
+    }
+
+    .ks-chapter-btn{
+        flex:1;
+        min-width:0;
+    }
+
+    /* ==========================
+       Footer
+       ========================== */
+
+    .ks-footer-container{
+        gap:var(--ks-space-6);
+    }
+
+}
+
+/* =========================================================
+   Mobile
+   Max Width: 576px
+   ========================================================= */
+
+@media (max-width:576px){
+
+    .ks-container{
+        padding-inline:var(--ks-space-4);
+    }
+
+    .ks-novel-grid{
+        grid-template-columns:1fr;
+    }
+
+    .ks-card-body{
+        padding:var(--ks-space-4);
+    }
+
+    .ks-hero-inner{
+        min-height:auto;
+        padding:var(--ks-space-6);
+    }
+
+    .ks-hero-title{
+        font-size:var(--ks-font-xl);
+    }
+
+    .ks-section-header{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:var(--ks-space-3);
+    }
+
+    .ks-reader{
+        padding:var(--ks-space-5);
+    }
+
+    .ks-reader-content{
+        font-size:1rem;
+    }
+
+    .ks-post-title{
+        font-size:var(--ks-font-xl);
+    }
+
+    .ks-post-meta{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:var(--ks-space-2);
+    }
+
+    .ks-chapter-nav{
+        flex-direction:column;
+    }
+
+    .ks-chapter-btn{
+        width:100%;
+    }
+
+    .ks-pagination{
+        flex-wrap:wrap;
+    }
+
+    .ks-footer-nav{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+}
+
+/* =========================================================
+   Small Mobile
+   Max Width: 400px
+   ========================================================= */
+
+@media (max-width:400px){
+
+    .ks-header{
+        height:var(--ks-mobile-header-height);
+    }
+
+    .ks-icon-btn{
+        width:var(--ks-mobile-icon-size);
+        height:var(--ks-mobile-icon-size);
+    }
+
+    .ks-hero-title{
+        font-size:var(--ks-font-lg);
+    }
+
+    .ks-post-title{
+        font-size:var(--ks-font-lg);
+    }
+
+    .ks-reader{
+        padding:var(--ks-space-4);
+    }
+
+    .ks-reader-content{
+        font-size:.95rem;
+    }
+
+}
