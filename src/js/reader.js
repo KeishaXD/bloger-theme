@@ -9,6 +9,7 @@
    Config
    ========================================================= */
 
+let saveProgressTimer = null;
 const KS_READER_KEY = "KeiScanlation.Reader";
 
 /* =========================================================
@@ -31,6 +32,16 @@ function initReader(){
 
     window.addEventListener("scroll",handleScroll);
 
+    document.addEventListener("visibilitychange",()=>{
+
+        if(document.visibilityState === "hidden"){
+
+            saveProgress();
+
+        }
+
+    });
+
 }
 
 /* =========================================================
@@ -41,9 +52,15 @@ function handleScroll(){
 
     updateProgress();
 
-    saveProgress();
-
     toggleBackToTop();
+
+    clearTimeout(saveProgressTimer);
+
+    saveProgressTimer = setTimeout(()=>{
+
+        saveProgress();
+
+    },300);
 
 }
 
@@ -139,7 +156,7 @@ function restoreSettings(){
 
             top:data.scroll,
 
-            behavior:"instant"
+            behavior: "auto"
 
         });
 
@@ -161,11 +178,11 @@ function createProgressBar(){
 
     progress.className = "ks-progress";
 
-    progress.innerHTML = `
+    const fill = document.createElement("div");
 
-        <div class="ks-progress-fill"></div>
+    fill.className = "ks-progress-fill";
 
-    `;
+    progress.appendChild(fill);
 
     document.body.appendChild(progress);
 
