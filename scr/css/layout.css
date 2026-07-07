@@ -47,7 +47,7 @@ body{
 .ks-main{
     flex:1;
     width:100%;
-    padding-block:var(--ks-space-7);
+    padding-block:var(--ks-section-padding);
 }
 
 /* =========================================================
@@ -66,6 +66,7 @@ body{
    ========================================================= */
 
 .ks-content{
+    width:100%;
     min-width:0;
 }
 
@@ -75,6 +76,7 @@ body{
 
 .ks-sidebar{
     width:100%;
+    min-width:0;
 }
 
 /* =========================================================
@@ -85,6 +87,7 @@ body{
     width:100%;
     max-width:var(--ks-reader);
     margin-inline:auto;
+    position:relative;
 }
 
 /* =========================================================
@@ -92,7 +95,7 @@ body{
    ========================================================= */
 
 .ks-section{
-    margin-bottom:var(--ks-space-9);
+    margin-bottom:var(--ks-section-padding);
 }
 
 /* =========================================================
@@ -104,19 +107,13 @@ body{
     gap:var(--ks-space-6);
 }
 
-/* 2 Columns */
-
 .ks-grid-2{
     grid-template-columns:repeat(2,minmax(0,1fr));
 }
 
-/* 3 Columns */
-
 .ks-grid-3{
     grid-template-columns:repeat(3,minmax(0,1fr));
 }
-
-/* 4 Columns */
 
 .ks-grid-4{
     grid-template-columns:repeat(4,minmax(0,1fr));
@@ -145,6 +142,10 @@ body{
 .ks-flex-column{
     display:flex;
     flex-direction:column;
+}
+
+.ks-flex-wrap{
+    flex-wrap:wrap;
 }
 
 /* =========================================================
@@ -204,19 +205,19 @@ body{
 }
 
 /* =========================================================
-   Width Utilities
+   Width & Height Utilities
    ========================================================= */
 
 .ks-w-full{
     width:100%;
 }
 
-/* =========================================================
-   Visibility
-   ========================================================= */
+.ks-h-full{
+    height:100%;
+}
 
-.ks-hidden{
-    display:none !important;
+.ks-min-h-screen{
+    min-height:100vh;
 }
 
 /* =========================================================
@@ -263,6 +264,10 @@ body{
     display:inline-block;
 }
 
+.ks-none{
+    display:none;
+}
+
 /* =========================================================
    Overflow Utilities
    ========================================================= */
@@ -295,27 +300,42 @@ body{
     position:sticky;
 }
 
+.ks-top-0{
+    top:0;
+}
+
+.ks-right-0{
+    right:0;
+}
+
+.ks-bottom-0{
+    bottom:0;
+}
+
+.ks-left-0{
+    left:0;
+}
+
 /* =========================================================
-   Visibility
+   Cursor Utilities
+   ========================================================= */
+
+.ks-pointer{
+    cursor:pointer;
+}
+
+/* =========================================================
+   Visibility Utilities
    ========================================================= */
 
 .ks-hidden{
     display:none !important;
 }
 
-.ks-invisible{
-    visibility:hidden;
-}
-
 .ks-visible{
     visibility:visible;
 }
 
-/* =========================================================
-   Header Scroll
-   ========================================================= */
-
-.ks-header.is-scrolled{
-    height:var(--ks-header-height-scrolled);
-    box-shadow:var(--ks-shadow-sm);
+.ks-invisible{
+    visibility:hidden;
 }

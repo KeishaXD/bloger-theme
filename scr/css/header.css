@@ -29,16 +29,17 @@
    Glass Effect
    ========================================================= */
 
-@supports(backdrop-filter:blur(10px)){
+@supports(backdrop-filter:blur(12px)){
 
     .ks-header{
-
-        background:color-mix(in srgb,var(--ks-bg) 85%,transparent);
+        background:color-mix(
+            in srgb,
+            var(--ks-bg) 85%,
+            transparent
+        );
 
         backdrop-filter:blur(12px);
-
         -webkit-backdrop-filter:blur(12px);
-
     }
 
 }
@@ -48,15 +49,13 @@
    ========================================================= */
 
 .ks-header-container{
-
     display:flex;
-
     align-items:center;
-
     justify-content:space-between;
 
     height:100%;
 
+    gap:var(--ks-space-6);
 }
 
 /* =========================================================
@@ -64,33 +63,29 @@
    ========================================================= */
 
 .ks-logo{
-
     display:flex;
-
     align-items:center;
-
     gap:var(--ks-space-3);
 
-    font-size:var(--ks-font-lg);
-
-    font-weight:700;
+    flex-shrink:0;
 
     white-space:nowrap;
 
-}
-
-.ks-logo img{
-
-    height:38px;
-
-    width:auto;
-
-}
-
-.ks-logo-text{
+    font-size:var(--ks-font-lg);
+    font-weight:700;
 
     color:var(--ks-text);
 
+    transition:color var(--ks-transition);
+}
+
+.ks-logo img{
+    width:auto;
+    height:var(--ks-logo-height);
+}
+
+.ks-logo-text{
+    color:inherit;
 }
 
 /* =========================================================
@@ -98,45 +93,38 @@
    ========================================================= */
 
 .ks-nav{
-
     display:flex;
-
     align-items:center;
 
-    gap:var(--ks-space-6);
-
+    flex-shrink:0;
 }
 
 .ks-nav-list{
-
     display:flex;
-
     align-items:center;
-
     gap:var(--ks-space-6);
-
 }
 
 .ks-nav-link{
-
     position:relative;
 
     display:flex;
-
     align-items:center;
 
     height:var(--ks-header-height);
 
+    font-size:var(--ks-font-sm);
     font-weight:500;
 
-    transition:color var(--ks-transition);
+    color:var(--ks-text);
 
+    transition:
+        color var(--ks-transition),
+        height var(--ks-transition);
 }
 
 .ks-nav-link:hover{
-
     color:var(--ks-primary);
-
 }
 
 /* =========================================================
@@ -144,13 +132,11 @@
    ========================================================= */
 
 .ks-header-action{
-
     display:flex;
-
     align-items:center;
-
     gap:var(--ks-space-2);
 
+    flex-shrink:0;
 }
 
 /* =========================================================
@@ -158,39 +144,30 @@
    ========================================================= */
 
 .ks-icon-btn{
-
     display:flex;
-
     align-items:center;
-
     justify-content:center;
 
-    width:42px;
-
-    height:42px;
+    width:var(--ks-icon-size);
+    height:var(--ks-icon-size);
 
     border-radius:var(--ks-radius-full);
 
-    transition:
-        background var(--ks-transition),
-        color var(--ks-transition);
+    color:var(--ks-text);
 
+    transition:
+        background-color var(--ks-transition),
+        color var(--ks-transition);
 }
 
 .ks-icon-btn:hover{
-
-    background:var(--ks-surface);
-
+    background-color:var(--ks-surface);
     color:var(--ks-primary);
-
 }
 
 .ks-icon-btn svg{
-
-    width:20px;
-
-    height:20px;
-
+    width:var(--ks-icon-font-size);
+    height:var(--ks-icon-font-size);
 }
 
 /* =========================================================
@@ -198,19 +175,18 @@
    ========================================================= */
 
 .ks-menu-toggle{
-
     display:none;
-
 }
 
 /* =========================================================
-   Header Shrink
+   Header Scroll
    ========================================================= */
 
 .ks-header.is-scrolled{
-
-    height:64px;
-
+    height:var(--ks-header-height-scrolled);
     box-shadow:var(--ks-shadow-sm);
+}
 
+.ks-header.is-scrolled .ks-nav-link{
+    height:var(--ks-header-height-scrolled);
 }

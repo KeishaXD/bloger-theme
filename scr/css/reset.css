@@ -3,34 +3,51 @@
    Reset CSS
    ========================================================= */
 
-/* Box Sizing */
+/* =========================================================
+   Box Sizing
+   ========================================================= */
+
 *,
 *::before,
 *::after{
     box-sizing:border-box;
 }
 
-/* Remove Default Margin */
+/* =========================================================
+   Remove Default Margin & Padding
+   ========================================================= */
+
 *{
     margin:0;
     padding:0;
 }
 
-/* Smooth Scroll */
+/* =========================================================
+   HTML
+   ========================================================= */
+
 html{
     scroll-behavior:smooth;
     -webkit-text-size-adjust:100%;
+    text-size-adjust:100%;
 }
 
-/* Body */
+/* =========================================================
+   Body
+   ========================================================= */
+
 body{
     min-height:100vh;
+    overflow-x:hidden;
     text-rendering:optimizeLegibility;
     -webkit-font-smoothing:antialiased;
     -moz-osx-font-smoothing:grayscale;
 }
 
-/* Media */
+/* =========================================================
+   Media
+   ========================================================= */
+
 img,
 picture,
 svg,
@@ -38,9 +55,13 @@ video,
 canvas{
     display:block;
     max-width:100%;
+    height:auto;
 }
 
-/* Form */
+/* =========================================================
+   Form
+   ========================================================= */
+
 input,
 button,
 textarea,
@@ -49,33 +70,49 @@ select{
     color:inherit;
     background:none;
     border:none;
-    outline:none;
 }
 
-/* Button */
+/* =========================================================
+   Button
+   ========================================================= */
+
 button{
     cursor:pointer;
+    background:transparent;
 }
 
-/* Link */
+/* =========================================================
+   Link
+   ========================================================= */
+
 a{
     color:inherit;
     text-decoration:none;
+    transition:color var(--ks-transition);
 }
 
-/* List */
+/* =========================================================
+   List
+   ========================================================= */
+
 ul,
 ol{
     list-style:none;
 }
 
-/* Table */
+/* =========================================================
+   Table
+   ========================================================= */
+
 table{
     border-collapse:collapse;
     border-spacing:0;
 }
 
-/* Text */
+/* =========================================================
+   Typography
+   ========================================================= */
+
 h1,
 h2,
 h3,
@@ -86,45 +123,86 @@ p{
     overflow-wrap:break-word;
 }
 
-/* Textarea */
+/* =========================================================
+   Textarea
+   ========================================================= */
+
 textarea{
     resize:vertical;
 }
 
-/* Fieldset */
+/* =========================================================
+   Fieldset
+   ========================================================= */
+
 fieldset{
     border:none;
 }
 
-/* Horizontal Line */
+/* =========================================================
+   Horizontal Rule
+   ========================================================= */
+
 hr{
     border:none;
 }
 
-/* Hidden Attribute */
+/* =========================================================
+   Iframe
+   ========================================================= */
+
+iframe{
+    border:0;
+}
+
+/* =========================================================
+   SVG
+   ========================================================= */
+
+svg{
+    fill:currentColor;
+}
+
+/* =========================================================
+   Hidden Attribute
+   ========================================================= */
+
 [hidden]{
     display:none !important;
 }
 
-/* Selection */
+/* =========================================================
+   Text Selection
+   ========================================================= */
+
 ::selection{
     background:var(--ks-primary);
-    color:#fff;
+    color:#ffffff;
 }
 
-/* Focus Visible */
+/* =========================================================
+   Focus Visible
+   ========================================================= */
+
 :focus-visible{
     outline:2px solid var(--ks-primary);
     outline-offset:2px;
 }
 
-/* Disabled */
+/* =========================================================
+   Disabled
+   ========================================================= */
+
 :disabled{
     cursor:not-allowed;
+    opacity:.6;
 }
 
-/* Reduce Motion */
-@media (prefers-reduced-motion: reduce){
+/* =========================================================
+   Reduced Motion
+   ========================================================= */
+
+@media (prefers-reduced-motion:reduce){
 
     html{
         scroll-behavior:auto;
@@ -133,9 +211,9 @@ hr{
     *,
     *::before,
     *::after{
-        animation-duration:0.01ms !important;
+        animation-duration:.01ms !important;
         animation-iteration-count:1 !important;
-        transition-duration:0.01ms !important;
+        transition-duration:.01ms !important;
         scroll-behavior:auto !important;
     }
 

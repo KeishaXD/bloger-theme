@@ -1,0 +1,88 @@
+/* =========================================================
+   KeiScanlation
+   Footer CSS
+   ========================================================= */
+
+/* =========================================================
+   Footer
+   ========================================================= */
+
+.ks-footer{
+    margin-top:var(--ks-space-10);
+    border-top:var(--ks-border-width) solid var(--ks-border);
+    background:var(--ks-surface);
+    transition:
+        background-color var(--ks-transition),
+        border-color var(--ks-transition);
+}
+
+/* =========================================================
+   Footer Container
+   ========================================================= */
+
+.ks-footer-container{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:var(--ks-space-4);
+
+    padding-block:var(--ks-space-9);
+
+    text-align:center;
+}
+
+/* =========================================================
+   Footer Brand
+   ========================================================= */
+
+.ks-footer-brand{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:var(--ks-space-2);
+}
+
+.ks-footer-title{
+    font-size:var(--ks-font-lg);
+    font-weight:700;
+    color:var(--ks-text);
+}
+
+.ks-footer-description{
+    max-width:520px;
+    color:var(--ks-text-light);
+    line-height:var(--ks-line-height);
+}
+
+/* =========================================================
+   Footer Navigation
+   ========================================================= */
+
+.ks-footer-nav{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:var(--ks-space-6);
+
+    flex-wrap:wrap;
+}
+
+.ks-footer-link{
+    color:var(--ks-text-light);
+    transition:
+        color var(--ks-transition);
+}
+
+.ks-footer-link:hover{
+    color:var(--ks-primary);
+}
+
+/* =========================================================
+   Copyright
+   ========================================================= */
+
+.ks-footer-copy{
+    font-size:var(--ks-font-sm);
+    color:var(--ks-text-light);
+}
