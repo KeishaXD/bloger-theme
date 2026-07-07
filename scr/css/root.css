@@ -1,62 +1,121 @@
+/* =========================================================
+   KeiScanlation
+   Root CSS
+   Design Tokens
+   ========================================================= */
+
 :root{
 
-  /* Color */
-  --ks-primary:#7C3AED;
-  --ks-primary-hover:#6D28D9;
-  --ks-secondary:#A78BFA;
+    /* =====================================================
+       Color
+       ===================================================== */
 
-  --ks-bg:#FFFFFF;
-  --ks-surface:#F8FAFC;
-  --ks-surface-2:#F1F5F9;
+    --ks-primary:#7C3AED;
+    --ks-primary-hover:#6D28D9;
+    --ks-secondary:#A78BFA;
 
-  --ks-text:#27272A;
-  --ks-text-light:#71717A;
+    --ks-bg:#FFFFFF;
+    --ks-surface:#F8FAFC;
+    --ks-surface-2:#F1F5F9;
 
-  --ks-border:#E5E7EB;
+    --ks-text:#27272A;
+    --ks-text-light:#71717A;
 
-  /* Typography */
+    --ks-border:#E5E7EB;
 
-  --ks-font-ui:'Poppins',sans-serif;
-  --ks-font-reader:'Lora',serif;
+    --ks-success:#22C55E;
+    --ks-warning:#F59E0B;
+    --ks-danger:#EF4444;
+    --ks-info:#3B82F6;
 
-  --ks-font-xs:.8rem;
-  --ks-font-sm:.9rem;
-  --ks-font-md:1rem;
-  --ks-font-lg:1.2rem;
-  --ks-font-xl:1.5rem;
-  --ks-font-2xl:2rem;
+    /* =====================================================
+       Typography
+       ===================================================== */
 
-  /* Radius */
+    --ks-font-ui:'Poppins',sans-serif;
+    --ks-font-reader:'Lora',serif;
 
-  --ks-radius-sm:8px;
-  --ks-radius:14px;
-  --ks-radius-lg:20px;
+    --ks-font-xs:.75rem;      /* 12px */
+    --ks-font-sm:.875rem;     /* 14px */
+    --ks-font-md:1rem;        /* 16px */
+    --ks-font-lg:1.125rem;    /* 18px */
+    --ks-font-xl:1.5rem;      /* 24px */
+    --ks-font-2xl:2rem;       /* 32px */
+    --ks-font-3xl:2.5rem;     /* 40px */
 
-  /* Shadow */
+    --ks-line-height:1.6;
+    --ks-line-reader:1.9;
 
-  --ks-shadow:
-  0 10px 25px rgba(0,0,0,.08);
+    /* =====================================================
+       Spacing
+       ===================================================== */
 
-  /* Width */
+    --ks-space-1:4px;
+    --ks-space-2:8px;
+    --ks-space-3:12px;
+    --ks-space-4:16px;
+    --ks-space-5:20px;
+    --ks-space-6:24px;
+    --ks-space-7:32px;
+    --ks-space-8:40px;
+    --ks-space-9:48px;
+    --ks-space-10:64px;
+    --ks-space-11:80px;
+    --ks-space-12:96px;
 
-  --ks-container:1200px;
-  --ks-reader:760px;
-  --ks-sidebar:320px;
+    /* =====================================================
+       Border Radius
+       ===================================================== */
 
-  /* Transition */
+    --ks-radius-xs:4px;
+    --ks-radius-sm:8px;
+    --ks-radius:14px;
+    --ks-radius-lg:20px;
+    --ks-radius-xl:28px;
+    --ks-radius-full:9999px;
 
-  --ks-speed:.25s ease;
+    /* =====================================================
+       Border
+       ===================================================== */
 
-/* Font */
---ks-font-ui:'Poppins',sans-serif;
---ks-font-reader:'Lora',serif;
+    --ks-border-width:1px;
 
-/* Transition */
---ks-transition:0.25s ease;
+    /* =====================================================
+       Shadow
+       ===================================================== */
 
-/* Shadow */
---ks-shadow-sm:0 2px 8px rgba(0,0,0,.06);
---ks-shadow:0 8px 24px rgba(0,0,0,.08);
---ks-shadow-lg:0 12px 36px rgba(0,0,0,.12);
+    --ks-shadow-sm:0 2px 8px rgba(0,0,0,.06);
+    --ks-shadow:0 8px 24px rgba(0,0,0,.08);
+    --ks-shadow-lg:0 12px 36px rgba(0,0,0,.12);
+
+    /* =====================================================
+       Layout
+       ===================================================== */
+
+    --ks-container:1200px;
+    --ks-reader:760px;
+    --ks-sidebar:320px;
+
+    --ks-header-height:72px;
+    --ks-footer-height:auto;
+
+    /* =====================================================
+       Z-Index
+       ===================================================== */
+
+    --ks-z-dropdown:100;
+    --ks-z-sticky:200;
+    --ks-z-fixed:300;
+    --ks-z-overlay:900;
+    --ks-z-modal:1000;
+    --ks-z-tooltip:1100;
+
+    /* =====================================================
+       Animation
+       ===================================================== */
+
+    --ks-transition-fast:.15s ease;
+    --ks-transition:.25s ease;
+    --ks-transition-slow:.4s ease;
 
 }

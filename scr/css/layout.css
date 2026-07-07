@@ -1,0 +1,312 @@
+/* =========================================================
+   KeiScanlation
+   Layout CSS
+   ========================================================= */
+
+/* =========================================================
+   Base
+   ========================================================= */
+
+body{
+    font-family:var(--ks-font-ui);
+    font-size:var(--ks-font-md);
+    line-height:var(--ks-line-height);
+    color:var(--ks-text);
+    background:var(--ks-bg);
+    transition:
+        background-color var(--ks-transition),
+        color var(--ks-transition);
+}
+
+/* =========================================================
+   Container
+   ========================================================= */
+
+.ks-container{
+    width:100%;
+    max-width:var(--ks-container);
+    margin-inline:auto;
+    padding-inline:var(--ks-space-5);
+}
+
+/* =========================================================
+   Wrapper
+   ========================================================= */
+
+.ks-wrapper{
+    display:flex;
+    flex-direction:column;
+    min-height:100vh;
+    width:100%;
+}
+
+/* =========================================================
+   Main
+   ========================================================= */
+
+.ks-main{
+    flex:1;
+    width:100%;
+    padding-block:var(--ks-space-7);
+}
+
+/* =========================================================
+   Content Layout
+   ========================================================= */
+
+.ks-layout{
+    display:grid;
+    grid-template-columns:minmax(0,1fr) var(--ks-sidebar);
+    gap:var(--ks-space-7);
+    align-items:start;
+}
+
+/* =========================================================
+   Content
+   ========================================================= */
+
+.ks-content{
+    min-width:0;
+}
+
+/* =========================================================
+   Sidebar
+   ========================================================= */
+
+.ks-sidebar{
+    width:100%;
+}
+
+/* =========================================================
+   Reader Layout
+   ========================================================= */
+
+.ks-reader{
+    width:100%;
+    max-width:var(--ks-reader);
+    margin-inline:auto;
+}
+
+/* =========================================================
+   Section
+   ========================================================= */
+
+.ks-section{
+    margin-bottom:var(--ks-space-9);
+}
+
+/* =========================================================
+   Grid
+   ========================================================= */
+
+.ks-grid{
+    display:grid;
+    gap:var(--ks-space-6);
+}
+
+/* 2 Columns */
+
+.ks-grid-2{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+}
+
+/* 3 Columns */
+
+.ks-grid-3{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+}
+
+/* 4 Columns */
+
+.ks-grid-4{
+    grid-template-columns:repeat(4,minmax(0,1fr));
+}
+
+/* =========================================================
+   Flex Utilities
+   ========================================================= */
+
+.ks-flex{
+    display:flex;
+}
+
+.ks-flex-center{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.ks-flex-between{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.ks-flex-column{
+    display:flex;
+    flex-direction:column;
+}
+
+/* =========================================================
+   Gap Utilities
+   ========================================================= */
+
+.ks-gap-8{
+    gap:var(--ks-space-2);
+}
+
+.ks-gap-12{
+    gap:var(--ks-space-3);
+}
+
+.ks-gap-16{
+    gap:var(--ks-space-4);
+}
+
+.ks-gap-24{
+    gap:var(--ks-space-6);
+}
+
+.ks-gap-32{
+    gap:var(--ks-space-7);
+}
+
+/* =========================================================
+   Margin Top Utilities
+   ========================================================= */
+
+.ks-mt-16{
+    margin-top:var(--ks-space-4);
+}
+
+.ks-mt-24{
+    margin-top:var(--ks-space-6);
+}
+
+.ks-mt-32{
+    margin-top:var(--ks-space-7);
+}
+
+/* =========================================================
+   Margin Bottom Utilities
+   ========================================================= */
+
+.ks-mb-16{
+    margin-bottom:var(--ks-space-4);
+}
+
+.ks-mb-24{
+    margin-bottom:var(--ks-space-6);
+}
+
+.ks-mb-32{
+    margin-bottom:var(--ks-space-7);
+}
+
+/* =========================================================
+   Width Utilities
+   ========================================================= */
+
+.ks-w-full{
+    width:100%;
+}
+
+/* =========================================================
+   Visibility
+   ========================================================= */
+
+.ks-hidden{
+    display:none !important;
+}
+
+/* =========================================================
+   Auto Margin
+   ========================================================= */
+
+.ks-mx-auto{
+    margin-inline:auto;
+}
+
+.ks-my-auto{
+    margin-block:auto;
+}
+
+/* =========================================================
+   Text Utilities
+   ========================================================= */
+
+.ks-text-left{
+    text-align:left;
+}
+
+.ks-text-center{
+    text-align:center;
+}
+
+.ks-text-right{
+    text-align:right;
+}
+
+/* =========================================================
+   Display Utilities
+   ========================================================= */
+
+.ks-block{
+    display:block;
+}
+
+.ks-inline{
+    display:inline;
+}
+
+.ks-inline-block{
+    display:inline-block;
+}
+
+/* =========================================================
+   Overflow Utilities
+   ========================================================= */
+
+.ks-overflow-hidden{
+    overflow:hidden;
+}
+
+.ks-overflow-auto{
+    overflow:auto;
+}
+
+/* =========================================================
+   Position Utilities
+   ========================================================= */
+
+.ks-relative{
+    position:relative;
+}
+
+.ks-absolute{
+    position:absolute;
+}
+
+.ks-fixed{
+    position:fixed;
+}
+
+.ks-sticky{
+    position:sticky;
+}
+
+/* =========================================================
+   Visibility
+   ========================================================= */
+
+.ks-hidden{
+    display:none !important;
+}
+
+.ks-invisible{
+    visibility:hidden;
+}
+
+.ks-visible{
+    visibility:visible;
+}
